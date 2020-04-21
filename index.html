@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>jQuery</title>
+  </head>
+  <body>
+
+   <div class="container py-5 my-5">
+    <div class="heading">
+       <strong>Using jQuery</strong>
+    </div>
+    <div class="first-part">
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+    <h1 class="btn btn-primary">Click Here To Hide</h1>
+     <p>Hi, I’m Md. Abu Sufian Sweet. I’m a web developer living in Dhaka, Bangladesh. I am a fan of web development, programming, and design. I’m also interested in travel and cricket.Now I'm working as a Full Stack Web Developer.</p>
+     </div>
+     <div class="col-lg-5 col-md-5">
+       <strong>Form :</strong>
+       <input type="text" placeholder="Your Name" class="form-control form-group" id="name">
+       <input type="text" placeholder="Your email" class="form-control form-group" id="email">
+       <input type="text" placeholder="Your Number" class="form-control form-group" id="number">
+       <button type="button" class="btn btn-danger">Show Information</button>
+       <h2></h2>
+     </div>
+     <div class="col-lg-3 col-md-3">
+      <strong>Color:</strong>
+       <input type="text" placeholder="Type A Color" class="form-control form-group color">
+       <input type="button" class="btn btn-dark click" value="Show The Color">
+     </div>
+     </div>
+     </div>
+     <div class="second-part">
+     <div class="row">
+       <div class="col-lg col-md col-sm">
+        <strong>Click Your Favourite Color :</strong>
+         <ul class="nav">
+           <li class="p-2"><input type="button" class="btn btn-danger red" value="Red"></li>
+           <li class="p-2"><input type="button" class="btn btn-primary blue" value="Blue"></li>
+           <li class="p-2"><input type="button" class="btn btn-dark black" value="Black"></li>
+           <li class="p-2"><input type="button" class="btn btn-warning yellow" value="Yellow"></li>
+           <li class="p-2"><input type="button" class="btn btn-success green" value="Green"></li>
+         </ul>
+       </div>
+       <div class="col-lg col-md col-sm">
+        <div class="calculator">
+         <strong>Calculator :</strong>
+         <input type="text" class="form-control result" disabled>
+         <ul class="nav">
+           <li><input type="button" class="btn btn-dark equal one" value="1"></li>
+           <li><input type="button" class="btn btn-dark equal two" value="2"></li>
+           <li><input type="button" class="btn btn-dark equal three" value="3"></li>
+           <li><input type="button" class="btn btn-dark equal four" value="4"></li>
+           <li><input type="button" class="btn btn-dark equal five" value="5"></li>
+         </ul>
+         <ul class="nav">
+           <li><input type="button" class="btn btn-dark equal six" value="6"></li>
+           <li><input type="button" class="btn btn-dark equal seven" value="7"></li>
+           <li><input type="button" class="btn btn-dark equal eight" value="8"></li>
+           <li><input type="button" class="btn btn-dark equal nine" value="9"></li>
+           <li><input type="button" class="btn btn-dark equal zero" value="0"></li>
+         </ul>
+         <ul class="nav">
+           <li><input type="button" class="btn btn-dark equal add" value="+"></li>
+           <li><input type="button" class="btn btn-dark equal sub" value="-"></li>
+           <li><input type="button" class="btn btn-dark equal div" value="/"></li>
+           <li><input type="button" class="btn btn-dark equal mult" value="*"></li>
+           <li><input type="button" class="btn btn-dark equal equation" value="="></li>
+         </ul>
+         </div>
+       </div>
+     </div>
+     </div>
+
+     <div class="third-part">
+       <div class="row">
+         <div class="col-lg col-md col-sm">
+           <strong>Result :</strong>
+           <input type="text" class="form-control btn-dark result-2" placeholder="Input Result :">
+           <input type="button" class="form-control btn btn-info kick" value="Show Result">
+           <h3>Result : <span></span></h3>
+         </div>
+         <div class="col-lg col-md col-sm">
+           <strong>Multiplication Table :</strong>
+           <input type="text" class="form-control btn-dark result-3" placeholder="Input Result :">
+           <input type="button" class="form-control btn btn-danger take " value="Get Multiplication Table">
+           <h5></h5>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+    <script >
+     /*fadeout*/
+      $(function(){
+      
+      $("h1").click(function(){
+        $("p").fadeOut(2000);
+      });
+
+      });
+    /*fadeout*/
+
+/*form*/
+$(function(){
+
+      $("button").click(function()
+      {
+
+        var a = $("#name").val();
+        var b = $("#email").val();
+        var c = $("#number").val();
+        $("h2").html("Your Name: " + a + "<br>"+ "Your Email: " + b + "<br>" + "Your Number: " + c);
+      });
+
+    });
+/*form*/
+
+/*color*/
+ $(function(){
+  $(".click").click(function(){
+
+    var color = $(".color").val();
+    $("body").css("background",color);
+
+  });
+ })
+/*color*/
+
+
+/*color-2*/
+
+$(function(){
+  $(".red").click(function(){
+
+    $("body").css("background","#dc3545")
+  })
+  $(".blue").click(function(){
+
+    $("body").css("background","#007bff")
+  })
+  $(".black").click(function(){
+
+    $("body").css("background","#343a40")
+  })
+  $(".yellow").click(function(){
+
+    $("body").css("background","#ffc107")
+  })
+  $(".green").click(function(){
+
+    $("body").css("background","#28a745")
+  })
+});
+/*color-2*/
+
+/*calculator*/
+$(function(){
+
+   var a = "";
+
+ $(".one").click(function(){
+   a+=1;
+  $(".result").val(a);
+ });
+
+ $(".two").click(function(){
+  a+=2;
+  $(".result").val(a);
+ });
+ $(".three").click(function(){
+  a+=3;
+  $(".result").val(a);
+ });
+ $(".four").click(function(){
+  a+=4;
+  $(".result").val(a);
+ });
+ $(".five").click(function(){
+  a+=5;
+  $(".result").val(a);
+ });
+ $(".six").click(function(){
+  a+=6;
+  $(".result").val(a);
+ });
+ $(".seven").click(function(){
+  a+=7;
+  $(".result").val(a);
+ });
+ $(".eight").click(function(){
+  a+=8;
+  $(".result").val(a);
+ });
+ $(".nine").click(function(){
+  a+=9;
+  $(".result").val(a);
+ });
+ $(".zero").click(function(){
+  a+=0;
+  $(".result").val(a);
+ });
+ $(".add").click(function(){
+  a+="+";
+  $(".result").val(a);
+ });
+ $(".sub").click(function(){
+  a+="-";
+  $(".result").val(a);
+ });
+ $(".div").click(function(){
+  a+="/";
+  $(".result").val(a);
+ });
+ $(".mult").click(function(){
+  a+="*";
+  $(".result").val(a);
+ });
+ 
+ $(".equation").click(function(){
+
+    a= eval($(".result").val());
+  $(".result").val(a);
+ });
+});
+/*calculator*/
+/*result*/
+
+
+$(function(){
+
+  $(".kick").click(function(){
+       var a = $(".result-2").val();
+
+if(a>=80){
+  $("span").text("A+");
+}
+else if(a>=70){
+  $("span").text("A");
+}
+else if(a>=60){
+  $("span").text("A-");
+}
+else if(a>=50){
+  $("span").text("B");
+}
+else if(a>=40){
+  $("span").text("C");
+}
+else if(a>=33){
+  $("span").text("D");
+}
+else{
+  $("span").text("Failed");
+}
+  });
+
+
+
+});
+/*result*/
+
+/*Multiplication table*/
+
+
+$(function(){
+  
+$(".take").click(function(){
+
+var a = 10;
+var c = $(".result-3").val();
+var b= "";
+for (i=1; i<=10; i++)
+  b += c + " X " + i + " = "+ c*i  + "<br>";
+   $("h5").html(b);
+});
+
+
+});
+
+
+
+/*Multiplication table*/
+    </script>
+    
+    
+  </body>
+</html>

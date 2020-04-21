@@ -1,0 +1,15 @@
+
+
+
+
+@media  (max-width: 991px){
+	.calculator ul li .equal {
+    padding: 25px;
+}
+}
+
+@media  (max-width: 767px){
+	.calculator ul li .equal {
+    padding: 17px;
+}
+}
